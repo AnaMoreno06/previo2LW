@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+
+  header {
+    background-color: #e08ae7;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  section {
+    display: none;
+    padding: 20px;
+  }
+
+  section.active {
+    display: block;
+  }
+
+  /* Sección Barman (grid + flex) */
+  .contenedor-barman {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .tarjeta-barman {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 20px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    align-items: center;
+  }
+
+  .tarjeta-barman img {
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+  }
+
+  .info-barman {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .campo {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #444;
+  }
+
+  .campo i {
+    margin-right: 10px;
+    color: #007bff;
+  }
+
+  /* Sección Cócteles */
+  .cocteles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .tarjeta {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .tarjeta img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .tarjeta h3 {
+    margin: 10px 0 5px;
+  }
+
+  .tarjeta button {
+    padding: 6px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .seleccionado {
+    border: 2px solid #28a745;
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+    transform: scale(1.05);
+  }
+
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    .tarjeta-barman {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .info-barman {
+      align-items: center;
+    }
+  }
